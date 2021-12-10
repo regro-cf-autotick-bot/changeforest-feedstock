@@ -1,5 +1,5 @@
 {% set name = "changeforest" %}
-{% set version = "0.1.1" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e17b087297b9d3f5843bc37a7b44e55c229fe93c7c915a3f64a72da1e66ba911
+  sha256: 803c0bc5b018a6f351ffd6d057cd0d86c8133ae4cf0d73e26892678fce283a73
 
 build:
-  number: 1
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -37,7 +37,7 @@ about:
   home: https://github.com/mlondschien/changeforest
   license: BSD-3-Clause
   license_file: LICENSE
-  summary: 'Classifier based non-parametric change point detection'
+  summary: Classifier based non-parametric change point detection
   description: |
     Change point detection tries to identify times when the probability distribution of a
     stochastic process or time series changes. Existing methods either assume a parametric
