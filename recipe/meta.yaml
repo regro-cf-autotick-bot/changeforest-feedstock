@@ -32,8 +32,10 @@ test:
     - changeforest
   requires:
     - pip
+    - pytest
   commands:
     - pip check
+    - pytest tests
 
 about:
   home: https://github.com/mlondschien/changeforest
